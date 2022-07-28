@@ -23,6 +23,21 @@ typedef struct list_s
 	struct list_s *next;
 } list_t;
 
+/**
+ * struct alias_s - A new struct defining aliases.
+ * @name: The name of the alias.
+ * @value: The value of the alias.
+ * @next: A pointer to another struct alias_s.
+ */
+typedef struct alias_s
+{
+	char *name;
+	char *value;
+	struct alias_s *next;
+} alias_t;
+
+/* Global aliases linked list */
+alias_t *aliases;
 
 /* Main Helpers */
 char **_strtok(char *line, char *delim);
