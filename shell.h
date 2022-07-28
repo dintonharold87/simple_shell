@@ -10,6 +10,10 @@
 #include <errno.h>
 #include <stdio.h>
 
+/* Main Helpers */
+char **_strtok(char *line, char *delim);
+
+
 
 /* String functions */
 int _strlen(const char *s);
