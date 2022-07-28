@@ -54,4 +54,10 @@ int _strspn(char *s, char *accept);
 int _strcmp(char *s1, char *s2);
 int _strncmp(const char *s1, const char *s2, size_t n);
 
+/* Linkedlist Helpers */
+alias_t *add_alias_end(alias_t **head, char *name, char *value);
+void free_alias_list(alias_t *head);
+list_t *add_node_end(list_t **head, char *dir);
+void free_list(list_t *head);
+
 #endif /* _SHELL_H_ */
