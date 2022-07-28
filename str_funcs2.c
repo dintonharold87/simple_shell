@@ -14,8 +14,8 @@ char *_strchr(char *s, char c)
 
 	for (index = 0; s[index]; index++)
 	{
-			if (s[index] == c)
-				return (s + index);
+		if (s[index] == c)
+			return (s + index);
 	}
 
 	return (NULL);
@@ -31,23 +31,22 @@ char *_strchr(char *s, char c)
  */
 int _strspn(char *s, char *accept)
 {
-		int bytes = 0;
-		int index;
+	int bytes = 0;
+	int index;
 
-		while (*s)
+	while (*s)
+	{
+		for (index = 0; accept[index]; index++)
 		{
-				for (index = 0; accept[index]; index++)
-				{
-						if (*s == accept[index])
-						{
-							bytes++;
-							break;
-						}
-				}
-				s++;
+			if (*s == accept[index])
+			{
+				bytes++;
+				break;
+			}
 		}
-		return (bytes);
+		s++;
+	}
+	return (bytes);
 }
-
 
 
