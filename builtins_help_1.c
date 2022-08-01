@@ -5,7 +5,7 @@
  */
 void help_all(void)
 {
-	char *msg = "Shellby\nThese shell commands are defined internally.\n";
+	char *msg = "Shell\nThese shell commands are defined internally.\n";
 
 	write(STDOUT_FILENO, msg, _strlen(msg));
 	msg = "Type 'help' to see this list.\nType 'help name' to find ";
@@ -23,7 +23,7 @@ void help_all(void)
 }
 
 /**
- * help_alias - Displays information on the shellby builtin command 'alias'.
+ * help_alias - Displays information on the shell builtin command 'alias'.
  */
 void help_alias(void)
 {
@@ -41,5 +41,21 @@ void help_alias(void)
 	msg = " an alias for each NAME whose VALUE is given. If NAME ";
 	write(STDOUT_FILENO, msg, _strlen(msg));
 	msg = "is already an alias, replace its value with VALUE.\n";
+	write(STDOUT_FILENO, msg, _strlen(msg));
+}
+
+/**
+ * help_exit - Displays information on the shell builtin command 'exit'.
+ */
+void help_exit(void)
+{
+	char *msg = "exit: exit [STATUS]\n\tExits the shell.\n\n\tThe ";
+
+	write(STDOUT_FILENO, msg, _strlen(msg));
+	msg = "STATUS argument is the integer used to exit the shell.";
+	write(STDOUT_FILENO, msg, _strlen(msg));
+	msg = " If no argument is given, the command is interpreted as";
+	write(STDOUT_FILENO, msg, _strlen(msg));
+	msg = " exit 0.\n";
 	write(STDOUT_FILENO, msg, _strlen(msg));
 }
