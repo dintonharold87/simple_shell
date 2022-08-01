@@ -59,3 +59,17 @@ void help_exit(void)
 	msg = " exit 0.\n";
 	write(STDOUT_FILENO, msg, _strlen(msg));
 }
+
+/**
+ * help_help - Displays information on the shell builtin command 'help'.
+ */
+void help_help(void)
+{
+	char *msg = "help: help\n\tSee all possible Shellby builtin commands.\n";
+
+	write(STDOUT_FILENO, msg, _strlen(msg));
+	msg = "\n      help [BUILTIN NAME]\n\tSee specific information on each ";
+	write(STDOUT_FILENO, msg, _strlen(msg));
+	msg = "builtin command.\n";
+	write(STDOUT_FILENO, msg, _strlen(msg));
+}
