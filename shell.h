@@ -53,6 +53,7 @@ char **_strtok(char *line, char *delim);
 char *get_location(char *command);
 list_t *get_path_dir(char *path);
 char *fill_path_dir(char *path);
+char *_itoa(int num);
 
 /* String functions */
 int _strlen(const char *s);
