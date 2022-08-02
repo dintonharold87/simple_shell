@@ -33,6 +33,18 @@ typedef struct list_s
 } list_t;
 
 /**
+ * struct builtin_s - A new struct type defining builtin commands.
+ * @name: The name of the builtin command.
+ * @f: A function pointer to the builtin command's function.
+ */
+typedef struct builtin_s
+{
+	char *name;
+	int (*f)(char **argv, char **front);
+} builtin_t;
+
+
+/**
  * struct alias_s - A new struct defining aliases.
  * @name: The name of the alias.
  * @value: The value of the alias.
@@ -86,6 +98,12 @@ int shellby_alias(char **args, char __attribute__((__unused__)) **front);
 int shellby_env(char **args, char __attribute__((__unused__)) **front);
 int shellby_setenv(char **args, char __attribute__((__unused__)) **front);
 int shellby_unsetenv(char **args, char __attribute__((__unused__)) **front);
+int (*get_builtin(char *command))(char **args, char **front);
+int shellby_exit(char **args, char **front);
+int shellby_cd(char **args, char __attribute__((__unused__)) **front);
+int shellby_alias(char **args, char __attribute__((__unused__)) **front);
+int shellby_help(char **args, char __attribute__((__unused__)) **front);
+
 
 void help_all(void);
 void help_alias(void);
