@@ -83,7 +83,9 @@ void free_list(list_t *head);
 
 /* Builtins */
 int shellby_alias(char **args, char __attribute__((__unused__)) **front);
-
+int shellby_env(char **args, char __attribute__((__unused__)) **front);
+int shellby_setenv(char **args, char __attribute__((__unused__)) **front);
+int shellby_unsetenv(char **args, char __attribute__((__unused__)) **front);
 
 void help_all(void);
 void help_alias(void);
