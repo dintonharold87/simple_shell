@@ -81,6 +81,10 @@ void free_alias_list(alias_t *head);
 list_t *add_node_end(list_t **head, char *dir);
 void free_list(list_t *head);
 
+/* Builtins */
+int shellby_alias(char **args, char __attribute__((__unused__)) **front);
+
+
 void help_all(void);
 void help_alias(void);
 void help_cd(void);
