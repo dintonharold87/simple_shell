@@ -176,12 +176,12 @@ int handle_args(int *exe_ret)
 }
 
 /**
- *  * check_args - Checks if there are any leading ';', ';;', '&&', or '||'.
- *   * @args: 2D pointer to tokenized commands and arguments.
- *    *
- *     * Return: If a ';', '&&', or '||' is placed at an invalid position - 2.
- *      *	   Otherwise - 0.
- *       */
+ * check_args - Checks if there are any leading ';', ';;', '&&', or '||'.
+ * @args: 2D pointer to tokenized commands and arguments.
+ *
+ * Return: If a ';', '&&', or '||' is placed at an invalid position - 2.
+ *	   Otherwise - 0.
+ */
 int check_args(char **args)
 {
 	size_t i;
