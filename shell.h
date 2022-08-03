@@ -66,6 +66,9 @@ char *get_location(char *command);
 list_t *get_path_dir(char *path);
 char *fill_path_dir(char *path);
 char *_itoa(int num);
+ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void assign_lineptr(char **lineptr, size_t *n, char *buffer, size_t b);
 
 /* Input Helpers */
 void handle_line(char **line, ssize_t read);
