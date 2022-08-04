@@ -69,6 +69,7 @@ char *_itoa(int num);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void assign_lineptr(char **lineptr, size_t *n, char *buffer, size_t b);
+int execute(char **args, char **front);
 
 /* Input Helpers */
 void handle_line(char **line, ssize_t read);
@@ -133,5 +134,5 @@ char *error_2_syntax(char **args);
 char *error_126(char **args);
 char *error_127(char **args);
 
-
+int proc_file_commands(char *file_path, int *exe_ret);
 #endif /* _SHELL_H_ */
